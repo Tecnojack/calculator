@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Conversor
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,67 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">CALCULADORA 1</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card>
+    <ion-card-content>
+      <ion-grid class="col-12">
+        <ion-row class="col-12">
+          <ion-col>
+            <ion-label>BINARIO A DECIMAL</ion-label>
+            <ion-label> Binario: {{resultDec}}</ion-label>
+            <ion-input [(ngModel)]=numBin id="bin" placeholder="Dig. Binario" type="number" (keyup)="getValue()">
+            </ion-input>
+          </ion-col>
+          <ion-col>
+            <ion-label>DECIMAL A BINARIO</ion-label>
+            <ion-label> Decimal: {{resultBin}}</ion-label>
+            <ion-input [(ngModel)]=numDec id="bin" type="number" placeholder="Dig. deciimal" (keyup)="getBinary()">
+            </ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-grid class="col-12">
+        <ion-row class="col-12">
+          <ion-col>
+            <ion-label>HEX A DECIMAL</ion-label>
+            <ion-label> Hexagecimal: {{resultDec1}}</ion-label>
+            <ion-input [(ngModel)]=numHex id="bin" placeholder="Dig. Hexagecimal" (keyup)="getHexDec()">
+            </ion-input>
+          </ion-col>
+          <ion-col>
+            <ion-label>DECIMAL A HEX</ion-label>
+            <ion-label> Decimal: {{resultHex}}</ion-label>
+            <ion-input [(ngModel)]=numDec1 id="bin" placeholder="Dig. decimal" (keyup)="getDecHex()">
+            </ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-grid class="col-12">
+        <ion-row class="col-12">
+          <ion-col>
+            <ion-label>OCTAL A DECIMAL</ion-label>
+            <ion-label> Octal: {{ resultDec2}}</ion-label>
+            <ion-input [(ngModel)]=numOct id="bin" placeholder="Dig. Octal" (keyup)="getOctDec()">
+            </ion-input>
+          </ion-col>
+          <ion-col>
+            <ion-label>DECIMAL A OCTAL</ion-label>
+            <ion-label> Decimal: {{resultOct}}</ion-label>
+            <ion-input [(ngModel)]=numDec2 id="bin" placeholder="Dig. decimal" (keyup)="getDecOct()">
+            </ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

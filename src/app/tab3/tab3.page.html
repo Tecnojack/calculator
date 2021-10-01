@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Calculadora Lógica
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,33 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-card>
+    <ion-card-content>
+      <ion-grid class="col-12">
+        <ion-row class="col-12">
+          <ion-col>
+            <ion-label>BINARIO 1</ion-label>
+            <ion-input [(ngModel)]=bin1 id="bin" placeholder="Dig. Binario 1" type="tex" (keyup)="getLogic()">
+            </ion-input>
+          </ion-col>
+          <ion-col>
+            <ion-label>BINARIO 2</ion-label>
+            <ion-input [(ngModel)]=bin2 id="bin" type="tex" placeholder="Dig. Binario 2" (keyup)="getLogic()">
+            </ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-col class="align">
+          <ion-item>
+            <ion-label>AND: {{and}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>OR: {{or}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>XOR: {{xor}}</ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
